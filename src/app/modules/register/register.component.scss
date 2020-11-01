@@ -1,0 +1,31 @@
+.o-container {
+  width: 80%;
+  min-width: 250px;
+  max-width: 450px;
+  border: none;
+  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+  background-color:#F9F8FF;
+  -webkit-box-shadow: 0px 1px 12px 0px rgba(255, 255, 255, 0.43);
+  -moz-box-shadow: 0px 1px 12px 0px rgba(255, 255, 255, 0.43);
+  box-shadow: 0px 1px 12px 0px rgba(255, 255, 255, 0.43);
+  border-radius: 2%;
+}
+
+.a-form {
+  padding: 30px;
+  min-width: 150px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.a-input {
+  width: 100%;
+}
+
+.a-link {
+  color:rgb(17, 163, 248);
+  margin: 0 10px;
+  text-decoration: none;
+}

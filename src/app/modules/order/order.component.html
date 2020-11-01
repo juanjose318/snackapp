@@ -1,0 +1,46 @@
+<app-toolbar></app-toolbar>
+<div class="o-container">
+  <h1>Winkelkaart</h1>
+  <app-summary [products]="products" (selection)="handleDelete($event)">
+  </app-summary>
+  <form [formGroup]="orderForm" class="a-form">
+    <mat-form-field
+      appearance="fill"
+      matFormFieldControl
+      class="a-input-hidden"
+    >
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+    <div formGroupName="fields">
+      <mat-form-field appearance="fill" class="a-input">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="address" type="text" />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="a-input">
+        <mat-label>Beschrijving</mat-label>
+        <textarea matInput formControlName="description" type="text"></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="a-input-hidden">
+        <mat-label>Products</mat-label>
+        <input matInput formControlName="product" type="text" />
+      </mat-form-field>
+    </div>
+    <div *ngIf="isAuthenticated === true; else placeOrder">
+      <button mat-raised-button color="primary" (click)="confirmOrder()">
+        Place Order
+      </button>
+    </div>
+    <ng-template #placeOrder>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="confirmOrder()"
+        disabled
+      >
+        Place Order
+      </button>
+      <p>You have to log in first in order to confirm your order</p>
+    </ng-template>
+  </form>
+</div>

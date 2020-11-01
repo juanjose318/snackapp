@@ -1,0 +1,71 @@
+<app-toolbar></app-toolbar>
+
+<div class="o-container">
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h1>Hamburgers</h1>
+          <img mat-card-image class="a-image-product" src="../../../assets/image/burger.svg" alt="Icon of a burger">
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-product
+        [product] ="burgers"
+        (selection)="addItemToCart($event)">
+      </app-product>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h1>Hotdogs</h1>
+          <img mat-card-image class="a-image-product" src="../../../assets/image/hotdog.svg" alt="Icon of a hotdog">
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-product
+         [product] ="hotdogs"
+         (selection)="addItemToCart($event)">
+      </app-product>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h1>Broodjes</h1>
+          <img mat-card-image class="a-image-product" src="../../../assets/image/sandwiches.svg" alt="Icon of a hotdog">
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-product
+         [product] ="sandwichs"
+         (selection)="addItemToCart($event)">
+      </app-product>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h1>Drank</h1>
+          <img mat-card-image class="a-image-product" src="../../../assets/image/no-drinks.svg" alt="Icon of a hotdog">
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-product
+         [product] ="drinks"
+         (selection)="addItemToCart($event)">
+      </app-product>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

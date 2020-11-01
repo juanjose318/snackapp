@@ -1,5 +1,5 @@
 {
-  "extends": "tslint:recommended",
+  "extends": ["tslint:recommended","tslint-config-prettier"],
   "rulesDirectory": [
     "codelyzer"
   ],
@@ -72,6 +72,9 @@
       "options": [
         "always"
       ]
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll.tslint": true
     },
     "space-before-function-paren": {
       "options": {

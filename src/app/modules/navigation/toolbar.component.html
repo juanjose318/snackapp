@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a routerLink="/" class="nav-link" routerLinkActive="nav-link-active"
+      ><span>Snacky Papi</span></a
+    >
+    <span class="example-spacer"></span>
+    <div *ngIf="isAuthenticated === false; else logout">
+      <a
+        routerLink="/login"
+        class="nav-link"
+        routerLinkActive="nav-link-active"
+        >Login</a
+      >
+      <a
+        routerLink="/register"
+        class="nav-link"
+        routerLinkActive="nav-link-active"
+        >Register</a
+      >
+    </div>
+    <ng-template #logout>
+      <a
+        href="#"
+        class="nav-link"
+        routerLinkActive="nav-link-active"
+        (click)="sendLogout()"
+        >Logout</a
+      >
+    </ng-template>
+
+    <button mat-button class="a-icon" (click)="goToShoppingCart()">
+      <img
+        src="../../../assets/image/shopping-cart.svg"
+        alt="shopping cart"
+      />
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

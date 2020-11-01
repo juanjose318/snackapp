@@ -1,0 +1,31 @@
+<mat-card class="m-card" *ngFor="let product of product">
+  <div *ngIf="product.acf.isdrink === true; else elseBlock">
+    <h2 class="a-product-title">{{ product.title.rendered }}</h2>
+    <mat-card-content>
+      <p><span class="strong">Prijs : </span>{{ product.acf.price }} €</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button class="a-icon" (click)="selectProduct(product)">
+        <img src="../../../assets/image/add_shopping_cart-black-18dp.svg" alt="shopping cart"/>
+        Toevoegen aan winkelkarrretje
+      </button>
+    </mat-card-actions>
+  </div>
+
+  <ng-template #elseBlock>
+    <h2 class="a-product-title">{{ product.title.rendered }}</h2>
+    <mat-card-content>
+      <p>
+        <span class="strong">Ingrediënten: </span>{{ product.acf.ingredients }}
+      </p>
+      <p><span class="strong">Saus: </span>{{ product.acf.sauce }}</p>
+      <p><span class="strong">Prijs : </span>{{ product.acf.price }} €</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button class="a-icon" (click)="selectProduct(product)">
+        <img src="../../../assets/image/add_shopping_cart-black-18dp.svg" alt="shopping cart"/>
+          Toevoegen aan winkelkarrretje
+      </button>
+    </mat-card-actions>
+  </ng-template>
+</mat-card>

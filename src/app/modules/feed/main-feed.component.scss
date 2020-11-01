@@ -1,0 +1,24 @@
+.o-container {
+  width: 80%;
+  max-width: 450px;
+  border: none;
+  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+  background-color:#F9F8FF;
+  -webkit-box-shadow: 0px 1px 12px 0px rgba(255, 255, 255, 0.43);
+  -moz-box-shadow: 0px 1px 12px 0px rgba(255, 255, 255, 0.43);
+  box-shadow: 0px 1px 12px 0px rgba(255, 255, 255, 0.43);
+  border-radius: 20%;
+}
+
+.a-image-product {
+  width: 20px;
+  height: 20px;
+  padding-top: 10px;
+  margin-left:10px;
+}
+
+.mat-expansion-panel-header {
+  padding:24px;
+}
