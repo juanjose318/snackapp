@@ -1,0 +1,2 @@
+# snackapp
+Made with Angular
